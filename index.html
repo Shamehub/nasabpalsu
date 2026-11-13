@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasab Klan Ba’alwi Dibatalkan Ulama Dari Masa-ke Masa — Imaduddin Utsman Al-Bantani</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Playfair Display, Crimson Pro, Lora & Amiri (Classical Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --desk-bg: #161412;
+            --paper-bg: #FAF6EE;
+            --paper-edge: #EAE2D3;
+            --paper-card: #F3ECE0;
+            --paper-arabic: #F6F0E4;
+            --ink-primary: #1E1C1A;
+            --ink-secondary: #524C44;
+            --emerald-deep: #143D30;
+            --gold-foil: #B88E4A;
+            --gold-line: rgba(184, 142, 74, 0.35);
+            --rule-color: #DCD3C4;
+            --font-scale: 1;
+            /* Dimensi Presisi Kertas A4 */
+            --a4-width: 210mm;
+            --a4-height: 297mm;
+        }
+
+        /* Theme: Sepia Klasik */
+        [data-theme="sepia"] {
+            --desk-bg: #221B13;
+            --paper-bg: #F2E7D0;
+            --paper-edge: #E1D1B3;
+            --paper-card: #E8DAC0;
+            --paper-arabic: #ECE0C7;
+            --ink-primary: #2B2116;
+            --ink-secondary: #5B4A36;
+            --emerald-deep: #244B2B;
+            --gold-foil: #9B6F32;
+            --gold-line: rgba(155, 111, 50, 0.35);
+            --rule-color: #D2C1A3;
+        }
+
+        /* Theme: Mode Malam */
+        [data-theme="night"] {
+            --desk-bg: #0B0D0F;
+            --paper-bg: #171A1E;
+            --paper-edge: #111317;
+            --paper-card: #1F2329;
+            --paper-arabic: #1C2026;
+            --ink-primary: #E4E0D8;
+            --ink-secondary: #9E988E;
+            --emerald-deep: #52B788;
+            --gold-foil: #D4AF37;
+            --gold-line: rgba(212, 175, 55, 0.28);
+            --rule-color: #2B3038;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at 50% 25%, #26221E 0%, var(--desk-bg) 80%);
+            color: var(--ink-primary);
+            font-family: 'Crimson Pro', 'Lora', Georgia, serif;
+            min-height: 100vh;
+            transition: background 0.35s ease, color 0.35s ease;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        /* ==================== VIEW TRANSITIONS ==================== */
+        .view-stage {
+            transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .view-hidden {
+            display: none !important;
+        }
+
+        /* ==================== STAGE 1: LUXURY HARDCOVER BOOK COVER ==================== */
+        #coverStage {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            perspective: 1800px;
+        }
+
+        .hardcover-book {
+            position: relative;
+            /* Dimensi fleksibel untuk Mobile, Presisi maksimal A4 */
+            width: 100%;
+            max-width: var(--a4-width);
+            min-height: 85vh; /* Fleksibel saat orientasi HP berubah */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            background:
+                radial-gradient(circle at 75% 18%, rgba(212, 175, 55, 0.16) 0%, transparent 52%),
+                radial-gradient(circle at 18% 85%, rgba(16, 65, 54, 0.5) 0%, transparent 55%),
+                linear-gradient(148deg, #061713 0%, #0B2620 46%, #0D1C2B 100%);
+            border-radius: 0.4rem 1.25rem 1.25rem 0.4rem;
+            box-shadow:
+                -6px 0 0 #05110E,
+                -11px 4px 14px rgba(0, 0, 0, 0.55),
+                4px 4px 0 #EAE2D3,
+                7px 7px 0 #D8CEBE,
+                10px 10px 0 #C8BCA9,
+                0 32px 70px rgba(0, 0, 0, 0.78),
+                inset 0 1px 1px rgba(249, 226, 156, 0.4);
+            overflow: hidden;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+        }
+
+        /* Mengunci tinggi presisi A4 hanya jika layar cukup besar (Tablet/Desktop) */
+        @media (min-width: 768px) {
+            .hardcover-book {
+                height: var(--a4-height);
+                min-height: auto;
+            }
+        }
+
+        @media (hover: hover) {
+            .hardcover-book:hover {
+                transform: translateY(-5px) rotateY(-2.5deg);
+            }
+        }
+
+        /* Physical Book Spine Crease */
+        .book-spine-groove {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 34px;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(0, 0, 0, 0.52) 28%,
+                rgba(249, 226, 156, 0.18) 44%,
+                rgba(0, 0, 0, 0.65) 64%,
+                rgba(255, 255, 255, 0.06) 80%,
+                transparent 100%
+            );
+            border-right: 1px solid rgba(212, 175, 55, 0.25);
+            pointer-events: none;
+            z-index: 15;
+        }
+
+        @media (min-width: 640px) {
+            .book-spine-groove {
+                width: 44px;
+            }
+        }
+
+        /* Islamic Girih Pattern Texture */
+        .cover-arabesque-bg {
+            position: absolute;
+            inset: 0;
+            opacity: 0.11;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F9E29C' stroke-width='0.85'%3E%3Cpolygon points='40,4 50,30 76,40 50,50 40,76 30,50 4,40 30,30'/%3E%3Crect x='18' y='18' width='44' height='44' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Ccircle cx='0' cy='0' r='14'/%3E%3Ccircle cx='80' cy='0' r='14'/%3E%3Ccircle cx='0' cy='80' r='14'/%3E%3Ccircle cx='80' cy='80' r='14'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 80px 80px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Subtle Foil Shimmer */
+        .cover-shimmer {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                115deg,
+                transparent 20%,
+                rgba(249, 226, 156, 0.04) 38%,
+                rgba(249, 226, 156, 0.11) 50%,
+                rgba(249, 226, 156, 0.04) 62%,
+                transparent 80%
+            );
+            background-size: 220% 220%;
+            animation: foilShimmer 9s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .cover-double-frame {
+            position: relative;
+            z-index: 10;
+            border: 1.5px solid rgba(212, 175, 55, 0.72);
+            border-radius: 0.75rem;
+            box-shadow:
+                inset 0 0 0 5px rgba(11, 37, 32, 0.65),
+                inset 0 0 0 6.5px rgba(249, 226, 156, 0.45),
+                0 0 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .gold-foil-title {
+            background: linear-gradient(
+                180deg,
+                #FFF3C4 0%,
+                #F9E29C 24%,
+                #D4AF37 54%,
+                #AA7C11 82%,
+                #E8C667 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.8));
+        }
+
+        .gold-foil-sub {
+            color: #F3D98B;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+        }
+
+        /* ==================== STAGE 2: CLASSIC PRINT BOOK READER ==================== */
+        .reader-toolbar {
+            background-color: rgba(20, 18, 16, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+            color: #F5F0E6;
+        }
+
+        /* Physical Book Page Sheet */
+        .physical-book-page {
+            position: relative;
+            /* Dimensi fleksibel untuk Mobile, Presisi maksimal A4 */
+            width: 100%;
+            max-width: var(--a4-width);
+            min-height: 85vh;
+            margin: 0 auto;
+
+            background-color: var(--paper-bg);
+            color: var(--ink-primary);
+            border-radius: 3px 12px 12px 3px;
+            box-shadow:
+                /* Spine binding shadow on the left */
+                inset 22px 0 32px -18px rgba(0, 0, 0, 0.16),
+                inset 3px 0 0 rgba(0, 0, 0, 0.08),
+                /* Stacked paper pages on the right edge */
+                3px 3px 0 var(--paper-edge),
+                4px 4px 0 rgba(0, 0, 0, 0.12),
+                7px 7px 0 var(--paper-edge),
+                8px 8px 0 rgba(0, 0, 0, 0.12),
+                11px 11px 0 var(--paper-edge),
+                0 25px 60px rgba(0, 0, 0, 0.55);
+            border: 1px solid var(--rule-color);
+            transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+        }
+
+        /* Kunci minimum tinggi A4 untuk Layar besar */
+        @media (min-width: 768px) {
+            .physical-book-page {
+                min-height: var(--a4-height);
+            }
+        }
+
+        /* Subtle paper grain overlay */
+        .physical-book-page::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(130, 110, 80, 0.06) 1px, transparent 0);
+            background-size: 20px 20px;
+            pointer-events: none;
+            border-radius: inherit;
+        }
+
+        /* Running Header & Footer */
+        .running-header {
+            border-bottom: 1px solid var(--rule-color);
+            color: var(--ink-secondary);
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 0.65rem; /* Lebih kecil untuk mobile */
+            letter-spacing: 0.06em;
+        }
+
+        .running-footer {
+            border-top: 1px solid var(--rule-color);
+            color: var(--ink-secondary);
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 0.85rem;
+        }
+
+        /* ==================== TIPOGRAFI RESPONSIVE (MOBILE-FIRST) ==================== */
+
+        /* Ukuran Font Dasar (Layar Kecil / HP) */
+        .book-prose {
+            font-family: 'Crimson Pro', 'Lora', Georgia, serif;
+            font-size: calc(0.92rem * var(--font-scale));
+            line-height: 1.65;
+            text-align: justify;
+            hyphens: auto;
+            color: var(--ink-primary);
+        }
+
+        .book-paragraph {
+            text-indent: 1.85em;
+            margin-bottom: 0.95rem;
+        }
+
+        .book-paragraph.no-indent {
+            text-indent: 0;
+        }
+
+        .book-drop-cap {
+            text-indent: 0 !important;
+        }
+
+        .book-drop-cap::first-letter {
+            float: left;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3rem;
+            line-height: 0.85;
+            padding-top: 0.15rem;
+            padding-right: 0.5rem;
+            padding-left: 0;
+            font-weight: 700;
+            color: var(--emerald-deep);
+        }
+
+        .book-chapter-label {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold-foil);
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .book-chapter-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: calc(1.15rem * var(--font-scale));
+            font-weight: 700;
+            line-height: 1.35;
+            color: var(--emerald-deep);
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1.5px solid var(--gold-line);
+            text-align: left;
+        }
+
+        .book-sub-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: calc(1rem * var(--font-scale));
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--emerald-deep);
+            margin-bottom: 0.75rem;
+            text-align: left;
+        }
+
+        .book-arabic-box {
+            background-color: var(--paper-arabic);
+            border-right: 3.5px solid var(--gold-foil);
+            border-left: 1px solid var(--rule-color);
+            border-top: 1px solid var(--rule-color);
+            border-bottom: 1px solid var(--rule-color);
+            border-radius: 6px;
+            padding: 0.85rem 1rem;
+            margin: 1rem 0 0.75rem 0;
+        }
+
+        .book-arabic-text {
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+            direction: rtl;
+            text-align: right;
+            font-size: calc(1.15rem * var(--font-scale)); /* Presisi untuk HP */
+            line-height: 2;
+            color: var(--ink-primary);
+            word-spacing: 1.2px;
+        }
+
+        .book-translation-box {
+            background-color: var(--paper-card);
+            border-left: 3.5px solid var(--emerald-deep);
+            border-right: 1px solid var(--rule-color);
+            border-top: 1px solid var(--rule-color);
+            border-bottom: 1px solid var(--rule-color);
+            border-radius: 6px;
+            padding: 0.85rem 1rem;
+            margin: 0.75rem 0 1rem 0;
+            font-style: italic;
+            font-size: calc(0.88rem * var(--font-scale));
+            line-height: 1.65;
+            text-align: justify;
+            color: var(--ink-primary);
+        }
+
+        .book-source-line {
+            background-color: var(--paper-card);
+            border: 1px solid var(--rule-color);
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            margin: 0.75rem 0 1rem 0;
+            font-size: calc(0.8rem * var(--font-scale));
+            word-break: break-all;
+        }
+
+        .book-source-line a {
+            color: var(--emerald-deep);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 600;
+        }
+
+        .book-ornament {
+            text-align: center;
+            color: var(--gold-foil);
+            margin: 1.4rem 0;
+            letter-spacing: 0.5em;
+            font-size: 0.95rem;
+        }
+
+        /* PEMULIHAN UKURAN FONT BESAR UNTUK DESKTOP (Layar > 640px) */
+        @media (min-width: 640px) {
+            .running-header {
+                font-size: 0.76rem;
+            }
+            .book-prose {
+                font-size: calc(1.16rem * var(--font-scale));
+                line-height: 1.82;
+            }
+            .book-drop-cap::first-letter {
+                font-size: 3.7rem;
+                line-height: 0.82;
+                padding-top: 0.22rem;
+                padding-right: 0.65rem;
+                padding-left: 0.05rem;
+            }
+            .book-chapter-title {
+                font-size: calc(1.38rem * var(--font-scale));
+                margin-bottom: 1.15rem;
+                padding-bottom: 0.65rem;
+            }
+            .book-sub-title {
+                font-size: calc(1.18rem * var(--font-scale));
+                margin-bottom: 0.9rem;
+            }
+            .book-arabic-box {
+                padding: 1.15rem 1.35rem;
+                margin: 1.15rem 0 0.85rem 0;
+            }
+            .book-arabic-text {
+                font-size: calc(1.4rem * var(--font-scale));
+                line-height: 2.15;
+                word-spacing: 1.5px;
+            }
+            .book-translation-box {
+                padding: 1.05rem 1.3rem;
+                margin: 0.75rem 0 1.25rem 0;
+                font-size: calc(1.06rem * var(--font-scale));
+                line-height: 1.75;
+            }
+            .book-source-line {
+                padding: 0.65rem 1rem;
+                margin: 0.85rem 0 1.15rem 0;
+                font-size: calc(0.95rem * var(--font-scale));
+            }
+        }
+
+        /* Active TOC item */
+        .toc-item.active {
+            background-color: rgba(212, 175, 55, 0.16);
+            border-left: 3px solid var(--gold-foil);
+            color: var(--emerald-deep);
+            font-weight: 700;
+        }
+
+        /* ==================== PRINT STYLES (FULL BOOK EXPORT - A4) ==================== */
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        @media print {
+            body {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                margin: 0;
+                padding: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            #coverStage {
+                display: flex !important;
+                page-break-after: always;
+                break-after: page;
+                height: 100vh !important;
+                min-height: 100vh !important;
+                padding: 0 !important;
+                align-items: center;
+                justify-content: center;
+            }
+            .hardcover-book {
+                width: 100% !important;
+                height: 100% !important;
+                max-width: none !important;
+                margin: 0 !important;
+                background: #0B2520 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                box-shadow: none !important;
+                transform: none !important;
+                border-radius: 0 !important;
+            }
+            .gold-foil-title {
+                background: none !important;
+                color: #F3D98B !important;
+                -webkit-text-fill-color: #F3D98B !important;
+                filter: none !important;
+            }
+            .cover-shimmer {
+                display: none !important;
+            }
+            #readerStage {
+                display: block !important;
+            }
+            .physical-book-page {
+                width: 100% !important;
+                min-height: auto !important;
+                max-width: none !important;
+                box-shadow: none !important;
+                border: none !important;
+                background: #FFFFFF !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .book-page-slice {
+                display: block !important;
+                page-break-after: always;
+                break-after: page;
+                padding: 0 !important; /* Rely on @page margins */
+            }
+            .book-page-slice:last-child {
+                page-break-after: auto;
+                break-after: auto;
+            }
+            .book-arabic-box, .book-translation-box, .book-source-line {
+                background: #F8F8F8 !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body data-theme="ivory">
+
+    <!-- ===================================================================== -->
+    <!-- STAGE 1: SEPARATE HARDCOVER BOOK COVER VIEW (TAMPILAN AWAL SAMPUL)    -->
+    <!-- ===================================================================== -->
+    <section id="coverStage" class="view-stage" aria-label="Sampul Buku">
+        <div class="hardcover-book pl-8 pr-4 py-6 sm:pl-12 sm:pr-8 sm:py-9">
+            <!-- Physical Spine Groove -->
+            <div class="book-spine-groove" aria-hidden="true"></div>
+            <!-- Arabesque Texture & Foil Shimmer -->
+            <div class="cover-arabesque-bg" aria-hidden="true"></div>
+            <div class="cover-shimmer" aria-hidden="true"></div>
+
+            <!-- Double Gold Foil Border Frame (Telah ditambahkan h-full w-full flex flex-col justify-center items-center) -->
+            <div class="cover-double-frame h-full w-full flex flex-col justify-center items-center px-5 py-8 sm:px-9 sm:py-11 text-center">
+
+                <!-- Tazhib Illumination Corners -->
+                <svg class="w-11 h-11 sm:w-14 sm:h-14 absolute top-2 left-2 pointer-events-none" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                    <path d="M4 72V16C4 9.37258 9.37258 4 16 4H72" stroke="#D4AF37" stroke-width="2"/>
+                    <path d="M12 56V20C12 15.5817 15.5817 12 20 12H56" stroke="#F9E29C" stroke-width="1.1" stroke-dasharray="3 2"/>
+                    <path d="M12 12L30 30M12 28C20 28 28 20 28 12" stroke="#D4AF37" stroke-width="1.2"/>
+                    <circle cx="32" cy="32" r="3" fill="#D4AF37"/>
+                    <circle cx="12" cy="12" r="2.5" fill="#FFF3C4"/>
+                </svg>
+
+                <svg class="w-11 h-11 sm:w-14 sm:h-14 absolute top-2 right-2 pointer-events-none" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                    <g transform="translate(80,0) scale(-1,1)">
+                        <path d="M4 72V16C4 9.37258 9.37258 4 16 4H72" stroke="#D4AF37" stroke-width="2"/>
+                        <path d="M12 56V20C12 15.5817 15.5817 12 20 12H56" stroke="#F9E29C" stroke-width="1.1" stroke-dasharray="3 2"/>
+                        <path d="M12 12L30 30M12 28C20 28 28 20 28 12" stroke="#D4AF37" stroke-width="1.2"/>
+                        <circle cx="32" cy="32" r="3" fill="#D4AF37"/>
+                        <circle cx="12" cy="12" r="2.5" fill="#FFF3C4"/>
+                    </g>
+                </svg>
+
+                <svg class="w-11 h-11 sm:w-14 sm:h-14 absolute bottom-2 left-2 pointer-events-none" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                    <g transform="translate(0,80) scale(1,-1)">
+                        <path d="M4 72V16C4 9.37258 9.37258 4 16 4H72" stroke="#D4AF37" stroke-width="2"/>
+                        <path d="M12 56V20C12 15.5817 15.5817 12 20 12H56" stroke="#F9E29C" stroke-width="1.1" stroke-dasharray="3 2"/>
+                        <path d="M12 12L30 30M12 28C20 28 28 20 28 12" stroke="#D4AF37" stroke-width="1.2"/>
+                        <circle cx="32" cy="32" r="3" fill="#D4AF37"/>
+                        <circle cx="12" cy="12" r="2.5" fill="#FFF3C4"/>
+                    </g>
+                </svg>
+
+                <svg class="w-11 h-11 sm:w-14 sm:h-14 absolute bottom-2 right-2 pointer-events-none" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                    <g transform="translate(80,80) scale(-1,-1)">
+                        <path d="M4 72V16C4 9.37258 9.37258 4 16 4H72" stroke="#D4AF37" stroke-width="2"/>
+                        <path d="M12 56V20C12 15.5817 15.5817 12 20 12H56" stroke="#F9E29C" stroke-width="1.1" stroke-dasharray="3 2"/>
+                        <path d="M12 12L30 30M12 28C20 28 28 20 28 12" stroke="#D4AF37" stroke-width="1.2"/>
+                        <circle cx="32" cy="32" r="3" fill="#D4AF37"/>
+                        <circle cx="12" cy="12" r="2.5" fill="#FFF3C4"/>
+                    </g>
+                </svg>
+
+                <!-- Top Arabic Calligraphy Cartouche -->
+                <div class="mb-6 sm:mb-8">
+                    <div class="inline-flex flex-col items-center px-5 sm:px-7 py-2.5 rounded-full border" style="background: linear-gradient(180deg, rgba(212, 175, 55, 0.16), rgba(10, 30, 26, 0.78)); border-color: rgba(249, 226, 156, 0.55); box-shadow: 0 4px 18px rgba(0,0,0,0.45);">
+                        <span class="text-base sm:text-xl font-bold" lang="ar" dir="rtl" style="font-family: 'Amiri', serif; color: #F9E29C;">
+                            دراسة تاريخية وتحقيقية في علم الأنساب
+                        </span>
+                        <span class="text-[9px] sm:text-[11px] uppercase tracking-[0.26em] font-semibold mt-0.5" style="color: #D4AF37;">
+                            Monograf Historiografi &amp; Ilmu Nasab
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Main Gold Foil Book Title -->
+                <h1 class="font-display text-2xl sm:text-3xl md:text-[2.35rem] font-extrabold uppercase tracking-wide leading-[1.26] gold-foil-title">
+                    NASAB KLAN BA’ALWI DIBATALKAN ULAMA DARI MASA-KE MASA
+                </h1>
+
+                <!-- Subtitle Ribbon -->
+                <div class="mt-5 sm:mt-6 flex justify-center">
+                    <div class="inline-block px-4 sm:px-7 py-2 rounded-lg border-y" style="background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.18), transparent); border-color: rgba(249, 226, 156, 0.55);">
+                        <p class="font-display text-xs sm:text-sm md:text-base font-bold tracking-[0.16em] uppercase gold-foil-sub">
+                            (MULAI ABAD KE-9 SAMPAI ABAD KE-15 HIJRIYAH)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Islamic Rosette Emblem -->
+                <div class="my-7 sm:my-8 flex items-center justify-center gap-3 sm:gap-4 w-full" aria-hidden="true">
+                    <span class="h-[1px] w-12 sm:w-20" style="background: linear-gradient(90deg, transparent, #D4AF37);"></span>
+                    <svg class="w-11 h-11 sm:w-12 sm:h-12 shrink-0" viewBox="0 0 64 64" fill="none">
+                        <rect x="15" y="15" width="34" height="34" stroke="#D4AF37" stroke-width="1.5"/>
+                        <rect x="32" y="8" width="34" height="34" transform="rotate(45 32 8)" stroke="#F9E29C" stroke-width="1.5"/>
+                        <circle cx="32" cy="32" r="10" stroke="#D4AF37" stroke-width="1.2"/>
+                        <circle cx="32" cy="32" r="3.5" fill="#FFF3C4"/>
+                    </svg>
+                    <span class="h-[1px] w-12 sm:w-20" style="background: linear-gradient(270deg, transparent, #D4AF37);"></span>
+                </div>
+
+                <!-- Author Plate -->
+                <div class="mb-7 sm:mb-8">
+                    <p class="font-display text-[11px] sm:text-xs italic tracking-[0.22em] uppercase mb-2" style="color: #D4AF37;">
+                        Karya:
+                    </p>
+                    <div class="inline-block px-5 sm:px-8 py-2.5 rounded-xl border" style="background: rgba(6, 20, 17, 0.7); border-color: rgba(212, 175, 55, 0.45);">
+                        <p class="font-display text-base sm:text-xl font-bold tracking-[0.1em] uppercase gold-foil-title">
+                            IMADUDDIN UTSMAN AL-BANTANI
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Primary Action Button: Mulai Membaca -->
+                <div class="no-print">
+                    <button id="startReadingBtn" type="button" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-sm sm:text-base font-bold tracking-wider uppercase transition duration-300 hover:scale-105 active:scale-95 cursor-pointer" style="background: linear-gradient(135deg, #FFF3C4 0%, #F9E29C 28%, #D4AF37 68%, #AA7C11 100%); color: #071915; box-shadow: 0 10px 28px rgba(212, 175, 55, 0.4), inset 0 1px 0 rgba(255,255,255,0.7);">
+                        <i class="fa-solid fa-book-open text-base"></i>
+                        <span>Mulai Membaca</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- STAGE 2: CLASSIC PRINT BOOK READER VIEW (TERPISAH DARI SAMPUL)        -->
+    <!-- ===================================================================== -->
+    <div id="readerStage" class="view-stage view-hidden min-h-screen flex flex-col">
+
+        <!-- Top Reader Bar -->
+        <header class="reader-toolbar sticky top-0 z-40 no-print">
+            <div class="max-w-5xl mx-auto px-3 sm:px-6 h-14 flex items-center justify-between gap-2">
+                
+                <!-- Left: Back to Cover & Table of Contents -->
+                <div class="flex items-center gap-2">
+                    <button id="backToCoverBtn" type="button" class="flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs sm:text-sm font-medium transition hover:bg-white/10 active:scale-95 cursor-pointer" style="border-color: rgba(212, 175, 55, 0.4); color: #F9E29C;" title="Kembali ke Sampul Buku">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Sampul</span>
+                    </button>
+
+                    <button id="openTocBtn" type="button" class="flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs sm:text-sm font-medium transition hover:bg-white/10 active:scale-95 cursor-pointer" style="border-color: rgba(255, 255, 255, 0.18); color: #F5F0E6;" title="Buka Daftar Isi">
+                        <i class="fa-solid fa-list-ul" style="color: #D4AF37;"></i>
+                        <span>Daftar Isi</span>
+                    </button>
+                </div>
+
+                <!-- Center: Current Page Indicator (Desktop) -->
+                <div class="hidden md:flex items-center gap-2 text-xs tracking-wider uppercase opacity-85">
+                    <span id="topPageIndicator">Halaman 1 dari 12</span>
+                </div>
+
+                <!-- Right: Font Scale, Paper Theme & Print -->
+                <div class="flex items-center gap-1.5 sm:gap-2">
+                    <!-- Font Size -->
+                    <div class="flex items-center rounded-lg border overflow-hidden" style="border-color: rgba(255,255,255,0.18);">
+                        <button id="fontDecBtn" type="button" class="px-2 py-1 text-xs font-bold hover:bg-white/10 cursor-pointer" title="Perkecil Huruf">A-</button>
+                        <button id="fontResetBtn" type="button" class="px-2 py-1 text-xs hover:bg-white/10 border-x cursor-pointer" style="border-color: rgba(255,255,255,0.18);" title="Ukuran Normal">A</button>
+                        <button id="fontIncBtn" type="button" class="px-2 py-1 text-xs font-bold hover:bg-white/10 cursor-pointer" title="Perbesar Huruf">A+</button>
+                    </div>
+
+                    <!-- Paper Theme -->
+                    <div class="flex items-center gap-1 px-1.5 py-1 rounded-lg border" style="border-color: rgba(255,255,255,0.18);">
+                        <button data-set-theme="ivory" type="button" class="theme-btn w-5 h-5 rounded-full border ring-2 ring-amber-400 cursor-pointer" style="background-color: #FAF6EE; border-color: #B88E4A;" title="Kertas Buku Gading"></button>
+                        <button data-set-theme="sepia" type="button" class="theme-btn w-5 h-5 rounded-full border cursor-pointer" style="background-color: #F2E7D0; border-color: #9B6F32;" title="Kertas Sepia Klasik"></button>
+                        <button data-set-theme="night" type="button" class="theme-btn w-5 h-5 rounded-full border cursor-pointer" style="background-color: #171A1E; border-color: #555;" title="Mode Malam"></button>
+                    </div>
+
+                    <!-- Print / PDF -->
+                    <button onclick="window.print()" type="button" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold transition hover:opacity-90 cursor-pointer" style="background-color: #D4AF37; color: #0B1F1A;" title="Cetak atau Simpan PDF">
+                        <i class="fa-solid fa-print"></i>
+                        <span class="hidden sm:inline">Cetak</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Table of Contents Slide Drawer -->
+        <div id="tocBackdrop" class="fixed inset-0 bg-black/60 z-50 hidden opacity-0 transition-opacity duration-300 no-print"></div>
+        <aside id="tocDrawer" class="fixed top-0 left-0 bottom-0 w-80 sm:w-96 max-w-[88vw] z-50 transform -translate-x-full transition-transform duration-300 ease-out flex flex-col border-r shadow-2xl no-print" style="background-color: var(--paper-bg); color: var(--ink-primary); border-color: var(--rule-color);">
+            <div class="p-4 border-b flex items-center justify-between" style="border-color: var(--rule-color);">
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest font-bold block" style="color: var(--gold-foil);">Struktur Buku</span>
+                    <h2 class="font-display text-lg font-bold" style="color: var(--emerald-deep);">Daftar Isi</h2>
+                </div>
+                <button id="closeTocBtn" type="button" class="w-8 h-8 rounded-lg border flex items-center justify-center hover:opacity-75 cursor-pointer" style="border-color: var(--rule-color);">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <nav id="tocList" class="flex-1 overflow-y-auto p-3 space-y-1 text-sm">
+                <button data-goto-page="1" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Pendahuluan</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 1</span>
+                </button>
+                <button data-goto-page="2" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-9 H: Kutipan Ali Al-Sakran</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 2</span>
+                </button>
+                <button data-goto-page="3" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-9 H: Kutipan Umar bin Abdurrahman Baalwi</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 3</span>
+                </button>
+                <button data-goto-page="4" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-10 H: Kutipan Muhammad bin Ali Khirid</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 4</span>
+                </button>
+                <button data-goto-page="5" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-11 H: Kutipan Muhammad bin Abubakar Al-Syili</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 5</span>
+                </button>
+                <button data-goto-page="6" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-12 H: Kutipan Ahmad bin Zen Al-Habsyi</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 6</span>
+                </button>
+                <button data-goto-page="7" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-13/14 H: Kutipan Umar bin Salim Alatas</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 7</span>
+                </button>
+                <button data-goto-page="8" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-15 H: Syaikh Awad Salim Hamden</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 8</span>
+                </button>
+                <button data-goto-page="9" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-15 H: Syaikh Salim Qadi Bawazir</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 9</span>
+                </button>
+                <button data-goto-page="10" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-15 H: Syaikh Abdullah Al-Syarafi &amp; Imam Muqbil</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 10</span>
+                </button>
+                <button data-goto-page="11" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-15 H: Dr. Nadine Al-Mewari &amp; Pangeran At-Tahiri</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 11</span>
+                </button>
+                <button data-goto-page="12" type="button" class="toc-item w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between gap-2 hover:bg-black/5 cursor-pointer">
+                    <span>Abad ke-15 H: Dr. Asyu’aibi &amp; Dr. Yasin Al-Kalidari</span>
+                    <span class="text-xs opacity-60 font-mono">Hal. 12</span>
+                </button>
+            </nav>
+
+            <div class="p-3 border-t text-center text-xs opacity-70" style="border-color: var(--rule-color);">
+                Gunakan tombol panah kiri/kanan pada papan ketik untuk membalik halaman.
+            </div>
+        </aside>
+
+        <!-- Main Physical Book Page Area -->
+        <main class="flex-1 flex flex-col items-center justify-between py-5 sm:py-8 px-3 sm:px-6">
+            
+            <!-- Physical Book Sheet Container -->
+            <div class="physical-book-page flex flex-col justify-between px-6 sm:px-14 md:px-16 py-6 sm:py-10">
+                
+                <!-- Running Header (Header Halaman Buku) -->
+                <div class="running-header pb-2.5 mb-6 flex items-center justify-between gap-4 no-print">
+                    <span class="truncate uppercase font-semibold">Nasab Klan Ba’alwi Dibatalkan Ulama</span>
+                    <span id="runningSectionLabel" class="shrink-0 italic">Pendahuluan</span>
+                </div>
+
+                <!-- Book Pages Container (All Text Preserved 100% Verbatim) -->
+                <div id="bookPagesContainer" class="flex-1 book-prose">
+
+                    <!-- ==================== HALAMAN 1: PENDAHULUAN ==================== -->
+                    <div class="book-page-slice" data-page="1" data-section="Pendahuluan">
+                        <span class="book-chapter-label">Muqaddimah</span>
+                        <h2 class="book-chapter-title">
+                            NASAB KLAN BA’ALWI DIBATALKAN ULAMA DARI MASA-KE MASA (MULAI ABAD KE-9 SAMPAI ABAD KE-15 HIJRIYAH)
+                        </h2>
+
+                        <p class="book-paragraph book-drop-cap">
+                            Nasab Ba’alwi adalah salah satu nasab ad’iya (pengaku keturunan) Bani Hasyim yang telah terbukti palsu yang paling tragis. Setiap zaman mulai abad ke-9 Hijriyah nasab mereka ditolak oleh ulama semasanya. Namun, klan Ba’alwi tetap bergeming. Mereka&nbsp; mengabaikan dalil-dalil para ulama itu dan meneruskan klaimnya sampai sekarang. Mereka memanfaatkan pengikutnya yang masih mempercayai nasabnya untuk dijadikan tameng klaim itu. Pengikutnya ini pula yang dijadikan pemanis mereka menjaring para ulama di luar kelompoknya untuk dicitrakan menjadi bagian kelompoknya. Terkadang sebagian ulama membutuhkan panggung untuk bereksistensi: ia memanfaatkan pengikut Ba’alwi yang telah tersedia siap pakai sebagai jembatan eksistensinya di dunia ulama.&nbsp; Terjadilah relasi symbiosis mutualisme: ulama membutuhkan jama’ah Ba’alwi; Ba’alwi membutuhkan legalisasi klaim dari ulama tersebut.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Klan Ba’alwi di Indonesia hari ini sering menyatakan: “selama 1000 tahun baru Imaduddin Utsman Al-Bantani yang membatalkan nasab Ba’alwi”. Dalam tulisan ini saya akan membuktikan bahwa pada hakikatnya nasab Ba’alwi adalah nasab yang tertolak sepanjang zaman walau mereka terus berusaha ingin diakui. Kemunculan nasab Ba’alwi yang tiba-tiba mengaku sebagai keturunan Nabi Muhammad di abad ke-9 H. tertolak oleh semua kitab nasab dan sejarah yang berjejer dari abad 4-9 Hijriyah. Tidak ada satupun kitab nasab yang mengitsbat mereka sebagai keturunan Nabi Muhammad SAW. Tidak ada satupun kitab sejarah yang mencatat ketokohan ulama mereka sampai abad ke-9 H.&nbsp; Nama-nama keluarga Ba’alwi hanya besar dalam catatan internal mereka sendiri, sedangkan dalam catatan ulama sezaman atau yang mendekati tidak disebutkan sama sekali. Nama-nama semisal Faqih Muqaddam, Sohib Mirbat, Ali Khali qasam, Alwi dan Ubed sama sekali nihil dari catatan para sejarawan. Sebelum abad ke-9 Hijriyah nama mereka tidak pernah dicatat sebagai apapun, tidak sebagai keturunan Nabi Muhammad, tidak sebagai ulama, pun tidak pernah dicatat sebagai yang pernah hidup di alam dunia.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dalam literasi internal klan Ba’alwi, selama 550 tahun mereka mengaku sebagai keturunan Nabi Muhammad SAW, selama itu pula nasab mereka dibatalkan oleh para ulama. Bersamaan dengan itu, dalam setiap masa,&nbsp; mereka juga tetap mampu memelihara kepercayaan nasab itu pada komunitas internal pengikut mereka yang terbatas.&nbsp; Dalam tulisan ini, saya akan mengetengahkan testimoni Ba’alwi dalam catatan-catatan internal mereka tentang masivnya pembatalan nasab Ba’alwi yang dilakukan oleh para ulama setiap masa. Juga nanti akan ditambahkan beberapa tokoh kekinian yang membatalkan nasab Ba’alwi.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 2: ABAD KE-9 H (ALI AL-SAKRAN) ==================== -->
+                    <div class="book-page-slice hidden" data-page="2" data-section="Abad ke-9 Hijriyah">
+                        <span class="book-chapter-label">Bab I • Abad ke-9 Hijriyah</span>
+                        <h2 class="book-chapter-title">
+                            PEMBATALAN NASAB BA’ALWI DI ABAD KE-9 HIJRIYAH KUTIPAN ALI AL-SAKRAN
+                        </h2>
+
+                        <p class="book-paragraph no-indent">
+                            Ali al-Sakran pada abad ke-9 Hijriyah, yaitu abad di mana keluarganya mulai mengaku sebagai keturunan Nabi Muhammad SAW&nbsp; mengisahkan dalam kitabnya Al-Burqa al-Musyiqa bagaimana para ulama-ulama mengingkari nasab Ba’alwi.&nbsp; Ia mengatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                وقد أطلت بعد ذكر نسب الشيخ القطب الفقيه الامام هذا الكلام لتطمئن قلوب المحبين وتسكن نفوس المؤمنين وتقوى عرى عقائد المسلمين ويصفو حسن ظن المعتقدين وتشرح به صدورهم وتحيي به قلوبهم وتلتذ به خواطرهم وتستنير به بواطنهم... فلا مبالاة بذي عداوة وضعن ولا بمن عمل بخبث حسده وامعن من كل حاسد متعاقل ومتعام جاهل أو غبي ذاهل وذي حماقة في بيداء غي جهله متراسل وبمقتضى خبث فساد طويته عامل ينتقد لخبث طبعه في خفاء وينكت بظفر حسده في جلاء مد الصفاء ولا يراعي لمحسن موجب شكر ولا وفاء ينكر بباطل بخار خياله شموس أنوار هذه النسبة الباهرة في الظهيرة ويغطي بغربال دخان محاله سواطع بدور صحة شرف هذه العصبة الساطعة المنيرة التي عظم شرفها وجل قدرها وعلا مجدها وارتفع شأنها لما اجتمع لها من كمال النسب وجمال السبب والطهارة من رذائل الشبه وخبث البدع وارجاس الطمع والتنزه عن شين المعتزلة ونجاسة عقائد الشيعة مع ما وهبوه من كمال التواضع وضعف النفوس وعدم رياستها باسقاط الكبر ومحو العجب وذميم أخلاق النفوس وانطباعهم على محاسن الاخلاق وكريم الطباع (البرقة المشيقة 122-123)
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Saya telah menguraikan poin ini setelah menyebutkan silsilah Syekh yang terhormat, Qutb, ahli hukum, Imam, untuk menenangkan hati para muhibbin, menenangkan jiwa orang-orang yang percaya, memperkuat ikatan akidah umat Islam, membersihkan husnudzuon orang-orang yang percaya, melegakan hati mereka, menghidupkan kembali hati mereka, menyenangkan pikiran mereka, dan menerangi batin mereka... Saya tidak memperdulikan orang-orang yang memiliki permusuhan, atau mereka yang bertindak dengan iri hati yang jahat, baik mereka yang cerdas, yang pura-pura buta yang bodoh, yang dungu, atau yang sama sekali tidak menyadari, tersesat di padang gurun kebodohan mereka, bertindak sesuai dengan kedengkian dan kerusakan niat mereka. Mereka mengkritik secara diam-diam karena sifat jahat mereka, dan mereka menusuk cahaya kesucian yang jernih dengan cakar iri hati mereka. Mereka tidak menunjukkan rasa hormat kepada dermawan yang pantas mendapatkan rasa terima kasih atau kesetiaan. Mereka mengingkari, dengan kepalsuan imajinasi mereka, matahari-matahari cemerlang dari garis keturunan ini yang bersinar terang di siang hari, dan mereka berusaha menutupi dengan asap khayalan mereka bulan-bulan yang bersinar dari keaslian dan kehormatan kelompok yang bercahaya dan gemilang ini, yang kehormatannya dibesar-besarkan, nilainya ditinggikan, kemuliaannya ditinggikan, dan statusnya diangkat tinggi karena kesempurnaan garis keturunan mereka, keindahan tujuan mereka, dan kesucian mereka dari keburukan kecurigaan. Dan kejahatan bid'ah dan kekotoran keserakahan, dan menjauhi kejelekan kaum Mu'tazilah dan kenajisan keyakinan Syiah, bersama dengan apa yang diberikan kepada mereka berupa kerendahan hati yang sempurna, kelemahan jiwa dan kurangnya kepemimpinan dengan meninggalkan kesombongan dan menghapus keangkuhan dan akhlak jiwa yang tercela dan kesan mereka tentang kebajikan akhlak dan sifat mulia (Al-Burqa Al-Mushiqa 122-123).”
+                        </div>
+
+                        <p class="book-paragraph">
+                            kutipan ini secara historis memvalidasi bahwa pembatalan nasab Ba'alawi bukanlah fenomena modern yang muncul di era kontemporer melainkan telah mengakar sejak pertama kali mereka mengaku sebagai keturunan Nabi Muhammad SAW di abad ke-9 Hijriyah. Dalam teks ini, Ali al-Sakran menarasikan para ulama yang membatalkan nasab Baalwi bukan sebagai akademisi yang melakukan kritik ilmiah-objektif, melainkan dicitrakan dengan atribut psikologis dan moral yang negative: memiliki permusuhan dan iri hati (hasad); disebut sebagai orang yang pura-pura buta, bodoh, dungu, atau tersesat dalam kebodohan; disebut bertindak karena kedengkian dan kerusakan niat.&nbsp; Secara sosiologis-retoris, teks ini menggunakan strategi delegitimasi lawan bicara. Alih-alih membantah argumen metodologis para ulama yang membatalkan, misalnya dengan menyodorkan bukti manuskrip kitab nasab atau dokumen historis, Ali al-Sakran&nbsp; mendiskreditkan kredibilitas moral ulama tersebut dengan menyebutnya sebagai hasad (dengki). Pola klan Ba’alwi ini konsisten bahwa sejak abad ke-9 H&nbsp; sampai hari ini, ulama&nbsp; yang membatalkan nasab mereka selalu dilabeli atau direduksi motivasinya sebagai orang yang hasud.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Pada kalimat pembuka, Ali al-Sakran menyatakan bahwa uraian tersebut ditulis untuk "menenangkan hati para muhibbin; menenangkan jiwa orang-orang yang percaya; memperkuat ikatan akidah..." Ini menunjukkan bahwa teks tersebut hanya berfungsi sebagai upaya mempertahankan kepercayaan internal mereka yang terlanjur percaya, bukan sebagai risalah jawaban ilmiyah bagi ulama yang telah membatalkan. Penggunaan metafora yang sangat kontras, seperti menyebut nasab Baalwi sebagai "matahari-matahari cemerlang" dan "bulan-bulan yang bersinar", sementara dalil-dalil para ulama yang membatalkan nasab Baalwi sebagai "asap khayalan" dan "cakar iri hati", merupakan bentuk hiperbola retoris. Secara psikologis, bahasa yang sangat defensif dan puitis ini mencerminkan tingginya tekanan sosial atau tekanan akademik yang dirasakan oleh Ali al-Sakran dan klan Baalwi yang nasabnya dibatalkan oleh para ulama pada masa itu.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 3: ABAD KE-9 H (UMAR BIN ABDURRAHMAN) ==================== -->
+                    <div class="book-page-slice hidden" data-page="3" data-section="Abad ke-9 Hijriyah">
+                        <span class="book-chapter-label">Bab II • Abad ke-9 Hijriyah</span>
+                        <h2 class="book-chapter-title">
+                            PEMBATALAN NASAB BA’ALWI DI ABAD KE-9 HIJRIYAH KUTIPAN UMAR BIN ABDURRAHMAN BAALWI
+                        </h2>
+
+                        <p class="book-paragraph no-indent">
+                            Selain Ali al-Sakran,&nbsp; klan Ba’alwi lain yang mereportase pembatalan nasab mereka sebagai keturunan Nabi Muhammad SAW adalah Umar bin Abdurrahman Baalwi (w.889 H.)&nbsp; dalam kitabnya Fath Allah al-Rahim al-Rahman . ia mengatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                ومن هنا استولى على ظن بعض الحساد والشقاق والعناد وقال أنهم ليسوا من ذرية فاطمة الزهرآء رضوان الله عليها الخ (فتح الله الرحيم الرحمن ص. 43-44)
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Dari sini, dipaksakanlah dugaan sebagian orang-orang yang iri, suka memecah belah, dan keras kepala, dan mengatakan bahwa mereka bukanlah keturunan Fatimah Al-Zahra, semoga Allah meridainya, dan seterusnya. (Fath Allah Al-Rahim Al-Rahman, hlm. 43-44)”.
+                        </div>
+
+                        <p class="book-paragraph">
+                            Pembaca bisa memperhatikan bahwa pada abad sembilan Hijriyah dua orang Baalwi: Ali al-Sakran dan Umar bin Abdurrahman telah memberi kesaksian bahwa pada abad pertama klan Baalwi mengaku keturunan Nabi Muhammad SAW, para ulama&nbsp; telah membatalkan nasab mereka.&nbsp; sama seperti Ali As-Sakran, Umar Ba'alawi hanya mampu menggunakan labeling psikologis dan moral untuk mendiskreditkan ulama-ulama yang membatalkan nasab mereka. Para ulama itu dicap sebagai: Al-hussad (orang-orang yang iri), al-Syuqaq (pemecah belah), dan al-Unnad (orang-orang yang keras kepala). Itulah yang bisa dilakukan klan Ba’alwi untuk menjawab para ulama yang membatalkan nasab mereka sejak dahulu kala sampai sekarang.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dalam sosiologi komunikasi, ketika sebuah otoritas menghadapi gugatan struktural atau genealogis, strategi defensif yang paling sering digunakan adalah menggeser fokus perdebatan. Alih-alih membongkar arsip atau mendiskusikan validitas dokumen silsilah, perdebatan digeser dari ranah objektif-akademik (benar atau salahnya catatan sejarah) menjadi ranah moral-karakter&nbsp; (pengkritik dituduh didorong oleh rasa dengki dan sifat keras kepala). Frasa "Dipaksakanlah Dugaan"&nbsp; mencerminkan mekanisme pertahanan ego berupa penolakan&nbsp; terhadap legitimasi argumen lawan. Kritik dianggap sebagai sesuatu yang dibuat-buat, dipaksakan, dan tidak memiliki dasar yang tulus, melainkan murni lahir dari kebencian personal. Pernyataan semacam ini berfungsi memperkuat kohesi internal di dalam klan Ba'alawi itu sendiri. Dengan men-cap pihak luar sebagai orang yang "iri dan keras kepala", para pengikut atau keturunan di dalam kelompok akan semakin yakin bahwa kritik yang datang di luar kelompok adalah serangan yang tidak berdasar, sehingga mereka tidak perlu melakukan verifikasi kritis terhadap silsilah itu walau bukti telah menyatakan palsu. Dalam disiplin ilmu nasab klasik, klaim silsilah tidak bisa dibuktikan hanya dengan menuding pihak lain dengki. Beban pembuktian berada di pihak yang mengklaim nasab untuk menyajikan jalur mata rantai valid secara sejarah, bukan dengan mendiskreditkan pihak yang membatalkan.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Konsistensi pola retorika antara teks Ali As-Sakran dan Umar Ba'alawi (w. 889 H) menunjukkan bahwa dari dulu, respons pembelaan kaum Ba'alawi di abad ke-9 Hijriyah terhadap kritik nasab memiliki pola yang seragam, yaitu: menghindari perdebatan berbasis dokumen otentik atau kritik teks sejarah; menggunakan pendekatan emosional dengan melabeli para pengkritik sebagai pihak yang hasud (dengki) dan keras kepala, tanpa mampu membawakan dalil pembuktian.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 4: ABAD KE-10 H (MUHAMMAD BIN ALI KHIRID) ==================== -->
+                    <div class="book-page-slice hidden" data-page="4" data-section="Abad ke-10 Hijriyah">
+                        <span class="book-chapter-label">Bab III • Abad ke-10 Hijriyah</span>
+                        <h2 class="book-chapter-title">
+                            PEMBATALAN NASAB BA’ALWI DI ABAD KE-10 HIJRIYAH KUTIPAN MUHAMMAD BIN ALI KHIRID&nbsp; BAALWI
+                        </h2>
+
+                        <p class="book-paragraph no-indent">
+                            Pada Abad ke-10 Hijriyah, seorang klan Ba’alwi mereportase bahwa banyak ulama yang hasud pada nasabnya lalu membatalkannya. Muhammad Ali Khirid Baalwi (w. 960 H.) dalam kitabnya Gurar al-Baha al-Dawi halaman 91 menyatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                فلا مبالاة بذي إنكار وعداوة ذي طعن ، ولا بمن عمل بخبث حسده وأمعن ، من كل غافل حاسد متغافل ، ومتعام جاهل ، وغبي ذاهل ، وذي حماقة في بيداء جهله متراسل ، ينكث بخبث طبعه في جفا ، ويثقب بظفر حسده لجلامد الصفا ، ينكر بباطل محال خياله شموس أنوار هذه النسبة الباهرة في الظهيرة ، ويغطي بغربال دخان محاله سواطع بدور صحة شرف هذه العصبة المنيرة (غرر البهاء الضوي ص.91)
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            "Maka tidak peduli terhadap orang yang ingkar, musuh, atau pen-tha’n (pembatal nasab), atau terhadap mereka yang bertindak dengan iri hati yang jahat dan terus melakukannya, dari setiap orang yang lalai, iri hati, berpura-pura lalai, dan orangpura-pura buta yang bodoh,&nbsp; dan orang yang orang bodoh yang lalai, yang berkeliaran di padang gurun ketidaktahuannya, yang, dengan kedengkian sifatnya, menusuk batu-batu kokoh dengan cakar iri hatinya, menyangkal dengan kebatilan kemustahilan imajinasinya, matahari-matahari terang dari nasab yang bersinar ini di tengah hari, dan menutupi dengan saringan asap kemustahilannya bulan purnama yang bersinar dari ke-syarif-an kelompok yang bercahaya ini” (Gurar al-baha al-Dawi hlm 91).
+                        </div>
+
+                        <p class="book-paragraph">
+                            Ucapan Khirid Baalwi ini mirip dengan ucapan Ali al-Sakran 65 tahun sebelumnya. nampaknya Khirid meminjam kalimat Ali al-Sakran untuk menghadapi ulama yang membatalkan nasab Ba’alwi yang tidak mereda sampai zamannya tersebut. Dalam kitabnya itu pula, untuk menguatkan nasabnya dengan basis otoritas, Khirid mengurut 70 nama-nama ulama yang diklaim mensahihkan nasabnya (h. 82-88), mirip dengan yang dilakukan oleh Hanif Alatas yang mengumpulkan nama-nama ulama yang diklaim mensahihkan nasabnya seperti Syekh Nawawi al-Bantani dan Syekh Hasyim Asy’ari. Sayangnya dari nama-nama yang disebutkan Khirid itu hanya ada satu ulama nasab yang disebutkan yaitu Ibnu Inabah (w. 828 H.),&nbsp; dan penyebutan itu terbukti palsu, karena Ibnu Inabah dalam kitabnya Umdatuttalib tidak menyebut Ubed sebagai anak Ahmad bin Isa. Bahkan dari nama-nama ulama yang disebutkan itu bukan nama-nama besar yang memiliki karya yang bisa diverifikasi. Beberapa nama yang bisa diverifikasi ternyata Khirid terbukti dusta. Semisal penyebutan Ibnu Samrah (w. 586&nbsp; H.) oleh Khirid tidak sesuai kenyataan dalam kitab Ibnu Samrah yaitu Thabaqat Fuqaha al-Yaman, di mana ia sama sekali tidak mencatat nama Ubed sebagai anak Ahmad bin Isa dan tidak mencatat satupun nama-nama klan Ba’alwi.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 5: ABAD KE-11 H (AL-SYILI) ==================== -->
+                    <div class="book-page-slice hidden" data-page="5" data-section="Abad ke-11 Hijriyah">
+                        <span class="book-chapter-label">Bab IV • Abad ke-11 Hijriyah</span>
+                        <h2 class="book-chapter-title">
+                            PEMBATALAN NASAB ABAD KE-11 HIJRIAH KUTIPAN MUHAMMAD BIN ABUBAKAR AL-SYILI BA’ALWI
+                        </h2>
+
+                        <p class="book-paragraph no-indent">
+                            Pada abad ke-11 Hijriyah pembatalan nasab Ba’alwi oleh para ulama terus berlangsung. Hal itu rupanya terjadi karena Ba’alwi hanya mampu menyebut nama-nama ulama yang mensahihkan nasab mereka dengan husnudzon tanpa berbasis data yang valid dan terverifikasi. Mirip yang terjadi di hari ini. Sepertinya, ulama-ulama nasab yang muktabar berjalan di suatu arah dengan keilmuannya yang berbasis data valid, sementara Ba’alwi berjalan di arah lain, ia tidak memperdulikan itu, ia hanya focus upaya meyakinkan nasabnya kepada para pengkutnya saja. sehingga dari masa ke masa, nasab Ba’alwi hanya diakui oleh kalangan internalnya saja atau ulama yang tidak memahami ilmu nasab, atau orang yang memahami ilmu nasab tetapi ia mempunyai kepentingan nasab, yaitu dari para pemalsu nasab juga.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Salah satu klan Ba’alwi yang mereportase pembatalan nasabnya pada abad ke-11 Hijriyah adalah Muhammad bin Abubakar al-Syili (w.1093 H.) . Dalam kitabnya Al-Masyra’ al-Rawi ia menyatakan banyaknya ulama yang membatalkan nasab Ba’alwi. Dalam kitabnya itu, pertama ia menyatakan sebagaimana kebiasaan klan Ba’alwi pendahulunya yang menyatakan nasabnya telah diijma, telah mutawatir, lalu mengklaim nasabnya diakui para ulama, tetapi sama sekali ia tidak mampu membawakan satupun kitab nasab otoritatif yang mensahihkan nasabnya. Jika Muhamad Khirid Ba’alwi mirip dengan Hanif Alatas, maka Al-Syili mirip dengan santri Sarang yang karena kebodohannya membela nasab Ba’alwi dengan alasan ijma. Sampai abad ke-11 Hijriyah itu Al-Syili hanya berpatokan kepada Ali bin Abu Bakar al-Sakran dan Muhammad bin Ali Khirid Baalwi sebagai dalil nasab Ba’alwi.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dalam kitab Al-Masyra’ al-Rawi juz 1 halaman 69 Al-Syili menyatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                (أعلم) أرشدنا الله وإياك للهداية، وأنقذنا من رزيات الغواية، أن نسب السادة الأشراف بني علوي مجمع عليه عند أهل التحقيق، متواتر عند أرباب التوفيق، مشهور عند العلماء الأعيان مذكور في كتب أهل هذا الشأن، وقد اعتنى ببيانه وواضح حججه وتبيانه، جمع كثيرون من العلماء وجم غفير من الفضلاء، لاسيما السيد الجليل علي بن أبي بكر، والإمام المحدث محمد بن علي بن علوي خرد، فانهما أطلقا سنان القلم في هذا المجال، وأطالا فيه من الاستدلال، والحامل لهما على بسط المقال مع أنه أشهر من الشمس وقت الزوال، وأوضح من البدر ليلة الكمال، خوف انكار حاسد متغافل، وغبي جاهل، أو أن ينكت بخبث طبعه في خفا، ويثقب بظفر حسده جلامد الصفا، بل ربما وقع بعض ذلك ممن ظهر عليه أثر الشقاوة، وختم الله على قلبه وجعل على بصره غشاوة، ووقع لبعضهم في فهم هذه النسبة مزيد خلل، فاقدم على أمر ليته عنه نكل فزعم أن قولهم آل باعلوي يدل على أنهم من ذرية علي من غير الحسن والحسين، وقد وقع هذا أيضا لبعض أبناء الوقت، ممن كبه الخزي والمقت وهذا الزعم البارد، الذي لا يصدر إلا من جاهل معاند.
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “(Ketahuilah) Semoga Allah membimbing kita dan Anda ke jalan yang benar, dan menyelamatkan kita dari malapetaka kesesatan, bahwa silsilah Sadah Alawi yang menjadi para syarif telah diijma oleh para ulama, mutawatir&nbsp; di antara mereka yang diberi karunia ilahi, terkenal di kalangan ulama terkemuka, dan disebutkan dalam buku-buku mereka yang berkecimpung dalam masalah ini. Banyak ulama dan sejumlah besar individu yang berbudi luhur telah sangat berhati-hati dalam menjelaskannya, mengklarifikasi bukti-buktinya, dan menguraikannya, terutama Sayyidi Ali ibn Abi Bakr yang terhormat dan ulama hadits Muhammad ibn Ali ibn Alawi Khird. Mereka berdua menggunakan pena mereka di bidang ini dan menguraikannya secara luas. Motivasi mereka untuk memperluas topik ini, meskipun lebih jelas daripada matahari di siang hari dan lebih terang daripada bulan purnama, adalah ketakutan akan penolakan oleh orang yang iri, tidak menyadari, atau bodoh, atau bahwa seseorang mungkin secara halus mengungkitnya dengan kedengkian sifat mereka dan menusuk batu terkeras dengan kuku iri hati mereka. Memang, sebagian dari ini mungkin terjadi di antara mereka yang telah melihat tanda-tanda kesengsaraan, yang hatinya telah disegel Allah dan matanya telah ditutup-Nya. Beberapa bahkan telah jatuh ke dalam kesalahan lebih lanjut dalam memahami garis keturunan ini. Maka ia melakukan sesuatu yang mungkin ia enggan menerima, makai a menduga bahwa ucapan mereka "keluarga Ba'alawi" menunjukkan bahwa mereka adalah keturunan Ali selain Hasan dan Hussein. Ini juga terjadi pada beberapa orang pada masa itu, yang dipermalukan dan dibenci oleh klaim dingin ini, yang hanya berasal dari orang yang bodoh dan keras kepala” (Al-Masyra’ al-Rawi Juz 1 h. 69).
+                        </div>
+
+                        <p class="book-paragraph">
+                            Perhatikan dari masa ke masa, nasab Ba’alwi dibatalkan oleh ulama. Sampai tahun 1090 Hijriyah nasab mereka masih mengalami tantangan pembatalan dari para ulama padahal telah berlangsung sekitar 200 tahun. Dalam kutipan tersebut, Al-Syilli tidak menyajikan bukti historis primer secara langsung tentang bahwa Ahmad bin Isa mempunyai anak Bernama Ubed. Sebaliknya, ia menggunakan strategi retorika defensif dan legitimasi otoritas untuk merespons pembatalan nasab Ba’alwi yang muncul pada masanya. Al-Syilli memulai pembelaannya dengan mengklaim bahwa nasab Ba'alawi telah mencapai derajat mutawatir dan telah diijma, persis seperti pembelaan mereka di hari ini.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dalam logika perdebatan (munazarah), strategi ini disebut appeal to consensus (argumen berbasis konsensus). Dengan menyatakan suatu hal sudah "final" dan "lebih terang dari matahari di siang bolong", Al-Syili&nbsp; berupaya menutup ruang diskusi kritis. Secara implisit, ia menyatakan bahwa pihak yang mempertanyakan berarti menentang otoritas keilmuan yang sudah mapan,&nbsp; padahal klaim mutawatir dan ijma’ itu hanya khayalan fiksi dan imajinasi yang dibangun keluarganya mulai 200 tahun yang lalu yang tidak bisa dibuktikan sama sekali dalam kitab-kitab nasab dan sejarah.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Untuk memperkuat klaimnya, al-Syilli merujuk pada tokoh-tokoh yang telah menulis pembelaan panjang lebar mengenai nasab ini, yaitu Ali bin Abi Bakr as-Sakran (w. 895 H) dan Muhammad bin Ali Khirid (w. 960 H).&nbsp; Jika dilihat dari perspektif historiografi kritis, kedua tokoh yang dijadikan rujukan utama tersebut berasal dari internal klan Ba'alawi sendiri dan hidup pada abad ke-9 dan ke-10 Hijriah, sekitar 500 hingga 600 tahun setelah era Ahmad bin Isa. Penggunaan rujukan internal yang terpisah jarak ratusan tahun dari masa hidup tokoh asal (Ubed) menciptakan pola argumen sirkular yaitu pembelaan keluarga dibuktikan dengan tulisan anggota keluarga itu sendiri di era belakangan, tanpa bisa diverifikasi pada kitab-kitab nasab klasik sezaman atau yang mendekati.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Bagian paling menonjol dalam kutipan ini adalah bagaimana al-Syilli membingkai para ulama yang membatalkan nasab Ba’alwi tersebut. Alih-alih menjawab substansi pembatalan&nbsp; dengan data historis, ia menyerang motif dan kondisi spiritual para ulama tersebut. Ulama yang membatalkan nasab Baalwi dilabeli oleh Al-Syili sebagai "pendengki" (hasid), "bodoh"&nbsp; dan "keras kepala. Pelabelan ini berfungsi mendiskreditkan kredibilitas ulama secara moral sebelum argumen mereka sempat diperiksa. Pengutipan frasa Al-Qur'an mengenai "hati yang terkunci" dan "penglihatan yang tertutup" menggeser perdebatan yang seharusnya bersifat historis-genealogis (ilmu nasab dan sejarah) menjadi persoalan akidah atau spiritual.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Pesan bawah sadar yang dibangun klan pemalsu nasab ini adalah bahwa meragukan nasab Ba'alawi merupakan tanda kesesatan hati, bukan sekadar perbedaan hasil riset sejarah. Secara historis, pembelaan brutal Al-Syili&nbsp; menjadi bukti otentik bahwa penolakan terhadap klaim keturunan Nabi pada klan Ba'alawi bukanlah fenomena baru di era modern tetapi berlangsung sejak awal pengakuan di abad ke-9 Hijriyah sampai masa Al-Syili di abad ke-11 Hijriyah. Dengan ini klaim ijma dan mutawatir nasab Ba’alwi itu sebenarnya bukanlah diijma dan telah mutawatir akan keabsahannya,&nbsp; tetapi telah diijma dan telah&nbsp; mutawatir dibatalkannya oleh para ulama sepanjang masa.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 6: ABAD KE-12 H (AHMAD BIN ZEN AL-HABSYI) ==================== -->
+                    <div class="book-page-slice hidden" data-page="6" data-section="Abad ke-12 Hijriyah">
+                        <span class="book-chapter-label">Bab V • Abad ke-12 Hijriyah</span>
+                        <h2 class="book-chapter-title">
+                            KESAKSIAN PEMBATALAN NASAB BA’ALWI KUTIPAN AHMAD BIN ZEN AL-HABSYI ABAD KE-12 HIJRIYAH
+                        </h2>
+
+                        <p class="book-paragraph no-indent">
+                            Pada abad ke-12 Hijriyah,&nbsp; &nbsp;nasab Ba’alwi terus menghadapi tantangan. Ketiadaan bukti penunjang kitab-kitab nasab muktabar yang menulis Ubed sebagai anak Ahmad bin Isa, terus menghantui keinginan mereka untuk dengan tenang diakui sebagai keturunan Nabi Muhammad SAW. Untuk itu, dalam setiap kitab yang mereka tulis, mereka tidak melupakan menyisipkan berita palsu bahwa nasab mereka adalah nasab yang sahih dan diakui ulama masa lalu, seperti yang dilakukan oleh Ahmad bin Zen Al-Habsyi (w. 1144 H.).
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dalam kitabnya Syarh al-Ainiyah Ahmad Al-Habsyi menyatakan bahwa nasab Ba’alwi adalah nasab yang sangat popular bahkan lebih masyhur dari matahari di waktu siang; lebih purnama dari bulan purnama. Kata-kata indah semacam itu adalah kata-kata yang jarang kita temui dari para keturunan nabi yang sahih. Tetapi rupanya untuk klan pemalsu seperti klan Baalwi kata-kata semacam itu sangat perlu diulang-ulang untuk menentramkan jiwa mereka dan kibin-kibin mereka. Bahkan Ahmad bin Zen Al-Habsyi menyisipkan cerita dusta yang telah lama dinarasikan oleh klan baalwi yaitu tentang kepergian Ali bin Jadid ke Irak untuk mencari pengakuan nasab. Padahal Ali bin jadid terbukti bukan bagian dari keluarga Alwi bin Ubed. Ia hanya korban klaim masa belakangan yang namanya terpaksa harus di bawa-bawa dalam diskursus batalnya nasab Ba’alwi karena adanya kesalahan Al-Janadi tahun 732 Hijriyah&nbsp; dalam mengurut silsilahnya dahulu.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Ahmad bin Zen al-habsyi dalam kitabnya mengatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                ونسبهم أشهر من الشمس وقت الزوال، وأوضح من البدر ليلة الكمال، إلا أنه قد حصل في زمن سابق إنكار، وطلب منهم تصحيح نسبهم، فسافر الإمام شيخ الإسلام، أبو الحسن علي بن محمد بن جديد إلى العراق، وأثبت نسبهم، وأشهد على ذلك نحو مائة عدل ممن يريد الحج، ثم أثبت ذلك بمكة، وأشهد عليه جميع من حج من حضرموت، فانقشعت سحب الأوهام، وتبلجت غرة الشرف العلموي، وأميط عنها اللثام... فانشد شعرا :&nbsp; أراك على شفا خطر مهول بما أودعت رأسك من فضول طلبت على تقدمنا دليلا متى احتاج النهار إلى دليل&nbsp; (شرح العينية ص. 136-137).
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            "Silsilah mereka lebih terkenal daripada matahari di tengah hari, dan lebih jelas daripada bulan purnama. Namun, di masa lalu, terjadi penyangkalan, dan mereka diminta untuk mengoreksi silsilah mereka. Maka, Imam, Syekh Islam, Abu al-Hasan Ali ibn Muhammad ibn Jadid, melakukan perjalanan ke Irak dan menetapkan silsilah mereka, dengan sekitar seratus saksi terpercaya yang berniat melaksanakan ibadah haji untuk membuktikannya. Kemudian beliau menetapkannya di Mekah, dan meminta semua jamaah haji dari Hadhramaut untuk membuktikannya. Dengan demikian, awan keraguan sirna, cahaya kehormatan keilmuan bersinar, dan tabir pun terangkat... Kemudian beliau membacakan sebuah puisi: Aku melihatmu di ambang bahaya yang mengerikan karena hal-hal yang tidak perlu yang telah kau percayakan pada pikiranmu. Kau mencari bukti keunggulan kami, tetapi kapan siang hari membutuhkan bukti?"
+                        </div>
+
+                        <p class="book-paragraph">
+                            Perhatikan usaha-usaha klan Ba’alwi di masa lalu mirip dengan usaha-usaha Ba’alwi dihari ini. Yaitu ketika nasabnya terbukti batal dengan data-data valid yang disampaikan para ulama berdasar kitab nasab muktabar, mereka kemudian bernarasi bahwa nasabnya sudah syuhra dan tidak perlu bukti lagi. Padahal syuhrahnya tidak terbukti sahih, dan bukti-buktinya bersaksi sebaliknya yaitu bahwa mereka sama sekali bukan keturunan Nabi Muhammad SAW. Hal lain yang dilakukan adalah mencari ulama yang cukup dikenal yang tidak faham ilmu nasab untuk dijadikan penyambung lidah agar menyampaikan kedustaan bahwa nasab mereka dapat diterima.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 7: ABAD KE 13/14 H (UMAR BIN SALIM ALATAS) ==================== -->
+                    <div class="book-page-slice hidden" data-page="7" data-section="Abad ke-13/14 Hijriyah">
+                        <span class="book-chapter-label">Bab VI • Abad ke-13/14 Hijriyah</span>
+                        <h2 class="book-chapter-title">
+                            KESAKSIAN PEMBATALAN NASAB BA’ALWI PADA ABAD KE 13/14 HIJRIYAH KUTIPAN UMAR BIN SALIM BIN UMAR ALATAS (1268-1321 H)
+                        </h2>
+
+                        <p class="book-paragraph no-indent">
+                            Abad ke-13-14 Hijriyah rupanya semakin masiv pembatalan ulama terhadap klan Ba’alwi yang mengaku sebagai keturunan Nabi Muhammad SAW. Hal itu tercermin dari sebuah buku yang dikarang oleh seorang klan Ba’alwi Bernama Umar bin Salim bin Umar Alatas (1268-1321 H.). pada tahun-tahun itu, yaitu antara kehidupan Umar bin Salim Alatas dari tahun 1268-1321 H. atau tahun 1852-1903 M klan Ba’alwi sudah banyak yang migrasi ke Jawa untuk mencari sesuap nasi terkait kelaparan dan kemiskinan yang melanda Hadramaut. Rupanya, tradisi pembatalan nasab klan Ba’alwi yang telah terbina di Hadramaut dari ulama-ulama Hadramaut terbawa sampai di Jawa, bahkan semakin tanpa tedeng aling-aling. Hal itu kemudian membuat Umar bin Salim Alatas perlu untuk membuat sebuah&nbsp; buku yang berusaha meyakinkan pengikutnya bahwa nasab mereka bisa diterima.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dalam buku yang berjudul “Itsbat ittishal Nasab al-Sadat al-alawiyyin”, Umar Alatas mendapat pertanyaan seperti di bawah ini:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                ما قول علماء المسلمين أيد الله بهم الدين وحفظ بهم الوجود من نزغات الملحدين في نسب السادة العلويين المشهورين بمكة والمدينة وحضرموت والاستانة ومصر واليمن وجاوه والهند وغيرها من سائر ديار المسلمين هل هو متصل بسيدنا الامام الحسين ابن سيدنا الامام على بن ابي طالب كرم الله وجهه بواسطة اتصالة بالسيد احمد بن عيسى المهاجر من البصرة إلى ارض حضرموت بطريق صحيح شرعى ام لا وهل في انكار اتصاله بسيدنا الحسين رضي الله عنه بواسطة انكار اتصال نسب السيد احمد بن عيسى بسيدنا الحسين ايذاء لرسول الله صلى الله عليه وسلم وما حكم المنكر لذلك الاتصال&nbsp; (اثبات اتصال نسب السادة العلويين ص. 3-4)
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Apa pendapat para ulama Muslim, semoga Allah melindungi agama dan menjaga keberlangsungan hidup melalui mereka dari hasutan kaum sesat, tentang silsilah para Sayyidi Alawi yang terkenal di Mekah, Madinah, Hadhramat, Istanbul, Mesir, Yaman, Jawa, India, dan negeri-negeri Muslim lainnya? Apakah silsilah tersebut terhubung dengan junjungan kita Imam Al-Hussein, putra junjungan kita Imam Ali bin Abi Talib, semoga Allah memuliakan wajahnya, melalui hubungannya dengan Sayyidi Ahmad bin Isa, yang berhijrah dari Basra ke negeri Hadhramat, melalui cara yang sah dan valid, atau tidak? Dan apakah mengingkari hubungannya dengan junjungan kita Al-Hussein, semoga Allah meridainya, dengan mengingkari hubungan silsilah Sayyidi Ahmad bin Isa dengan junjungan kita Al-Hussein, merupakan penghinaan terhadap Rasulullah, semoga Allah memberinya berkah dan keselamatan? Dan apa hukum bagi orang yang mengingkari hubungan tersebut? (Itsbat ittishal Nasab al-Sadat al-alawiyyin hlm. 3-4)”.
+                        </div>
+
+                        <p class="book-paragraph">
+                            Dari reportase adanya&nbsp; pertanyaan kepada Umar Alatas di abad ke-13-14 Hijriyah itu, kita mengetahui bahwa sungguh sudah sangat kronis pembatalan nasab Ba’alwi pada saat itu. Diskursus itu sangat panas dikalangan Ba’alwi dan kaum Hadrami di Jawa dan beberapa tempat diaspora Hadrami lainnya. Namun rupanya, diskursus pembatalan Ba’alwi pada saat itu tidak banyak diketahui oleh para ulama-ulama Nusantara yang tengah gigih berjuang mengusir penjajah dan sebagainnya tetap focus mengkader santri di pondok pesantren. Apalagi mayoritas ulama-ulama Nusantara tidak mau mengakses berita-berita koran dan majalah yang terbit pada saat itu kecuali dari&nbsp; ulama Muhammadiyah dan PSI yang berkoneksi dengan Al-Irsyad. Sehingga ulama-ulama NU hari ini kaget ketika bukti-bukti yang bagaikan matahari menyibak gelapnya malam itu ditunjukan bahwa sama sekali klan Ba’alwi ini bukanlah keturunan Nabi Muhammad SAW. Mereka mengira bahwa ini adalah hal yang baru yang tidak pernah terjadi, padahal bagi ulama-ulama Muhammadiyah dan PSI, hal itu telah menjadi konsumsi pengetahuan kakek-kakek mereka pada tahun 1900-an yang kemudian dititiskan&nbsp; menjadi vaksin generasi mereka saat ini dari iklan-iklan khurafat dan nasab&nbsp; Ba’alwi.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 8: ABAD KE-15 H (AWAD SALIM HAMDEN) ==================== -->
+                    <div class="book-page-slice hidden" data-page="8" data-section="Abad ke-15 Hijriyah">
+                        <span class="book-chapter-label">Bab VII • Abad ke-15 Hijriyah</span>
+                        <h2 class="book-chapter-title">
+                            PEMBATALAN NASAB BA’ALWI PADA ABAD KE-15 HIJRIYAH
+                        </h2>
+
+                        <h3 class="book-sub-title">
+                            SYAIKH AWAD SALIM HAMDEN YAMAN MEMBATALKAN NASAB BA’ALWI DI ABAD KE-15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Pada tanggal 23 Agustus 2025 M. telah dilaksanakan seminar ilmiyah di Yaman terkait nasab dan sejarah Ba’alwi. Seminar itu diselenggarakan oleh Markaz Hadramaut li al Dirasat al Tarikhiyah wa al Tautsiq wa al Nasyr (Pusat Studi Sejarah, Dokumentasi dan Penerbitan Hadhramaut) yang berpusat di Ibukota Provinsi Hadramaut, Mukalla dan disiarkan live melalui yotube. Tampil dalam seminar itu narasumber seorang sejarawan terkenal di Hadramaut Syaikh Awad Salim Hamden. Dalam makalah berjudul “Ibnu Hisan Al-Muftara alaihi” (Ibnu Hassan yang difitnah), Syaikh Awad mempersoalkan banyak pertanyaan tentang buku Tarikh Ibnu Hassan yang disunting oleh DR. Muhammad bin Abubakar Badzib.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dalam presentasinya Syaikh Awad menyatakan, Muhammad Sahib Mirbat yang disebut sebagai kakek dari Ahmad bin Alwi itu tokoh legenda (fiktif). Dengan pernyataan tegas Syaikh Awad ini, maka runtuhlah dan batal-lah nasab Ba’alwi yang dibangun berdasar nama Muhammad Sahib Mirbat.
+                        </p>
+
+                        <div class="book-source-line">
+                            <strong>Sumber:</strong> <a href="https://www.youtube.com/watch?v=I44myTmiKAM" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=I44myTmiKAM</a>
+                        </div>
+                    </div>
+
+                    <!-- ==================== HALAMAN 9: ABAD KE-15 H (SALIM QADI BAWAZIR) ==================== -->
+                    <div class="book-page-slice hidden" data-page="9" data-section="Abad ke-15 Hijriyah">
+                        <span class="book-chapter-label">Bab VII • Abad ke-15 Hijriyah (Lanjutan)</span>
+                        <h3 class="book-sub-title">
+                            SYAIKH SALIM QADI BAWAZIR YAMAN MEMBATALKAN NASAB BA’ALWI DI ABAD KE-15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Seorang ulama Yaman yang bernam Syaikh Salim Qadi Bawazir dalam kitabnya “Dirasat al-Naqdliiyah Li Tahqiqi Badzib Li Makhtuth Mansub Li Ibni Hisan (2025), menyatakan bahwa&nbsp; pengakuan klan Ba’alwi sebagai bagian keluarga jadid dalah batil. Ba’alwi Ubed tidak ada kaitannya dengan Baa’lwi Jadid. Silsilah Jadid bin Abdullah yang ada di kitab Al-Suluk tahun 732 H. karya Aljanadi tidak ada kaitannya dengan Alwi bin Ubed. Dengan batalnya klaim mereka sebagai bagian dari keluarga Jadid maka batalah pula klaim mereka sebagai bagian dari keturunan Ahmad bin Isa.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Salim Qadi Bawazir menyatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                وهذا الادعاء جريء وغير مدعوم بالأدلة الصريحنة، فالجد الذي ينتسب إليه آل جديد كما في كتب تاريخ أهل اليمن ليس له علاقة . إطلاقا بثلاثية ( علوي، وبصري جديد التي وردت في كتب المناقب الملفقة في نهاية القرن التاسع وما بعده كالبرقة والغرر والمشرع، ولم تذكر هذه القرابة كتب أهل اليمن فدعواه أن جميع المؤرخين.. إلى آخره باطلة&nbsp; (دراسة نقدية لتحقيق باذيب لمخطوط منسوب لابن حسان ص. 12)
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            "Klaim ini berani dan tidak didukung oleh bukti yang jelas. Leluhur yang dikaitkan dengan keluarga Al Jadid, sebagaimana disebutkan dalam buku-buku sejarah Yaman, sama sekali tidak memiliki hubungan dengan tiga serangkai (Alawi, Basri, Jadid) yang disebutkan dalam karya-karya hagiografi palsu dari akhir abad kesembilan dan seterusnya, seperti Al-Barqa, Al-Ghurar, dan Al-Mashra'. Kekerabatan ini tidak disebutkan dalam teks-teks sejarah Yaman, sehingga klaimnya bahwa semua sejarawan...dll. adalah salah (Dirasat al-Naqdliiyah Li Tahqiqi Badzib Li Makhtuth Mansub Li Ibni Hisan (2025) hlm. 12)."
+                        </div>
+
+                        <p class="book-paragraph">
+                            Perhatikan, suda dua orang ulama dan sejarawan Hadramaut yang hari ini masih hidup dengan tegas membatalkan nasab Ba’alwi dengan meyakinkan.
+                        </p>
+                    </div>
+
+                    <!-- ==================== HALAMAN 10: ABAD KE-15 H (AL-SYARAFI & IMAM MUQBIL) ==================== -->
+                    <div class="book-page-slice hidden" data-page="10" data-section="Abad ke-15 Hijriyah">
+                        <span class="book-chapter-label">Bab VII • Abad ke-15 Hijriyah (Lanjutan)</span>
+                        <h3 class="book-sub-title">
+                            SYAIKH ABDULLAH BIN SALIH ABU THAL’AH AL-SYARAFI YAMAN MEMBATALKAN NASAB BA’ALWI ABAD 15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Setelah dua orang pakar sejarah Yaman membatalkan nasab Ba’alwi kini seorang ulama pakar hadits dari Yaman yang&nbsp; bernama Syaikh Abdullah bin Salih Abu Thal’ah al-Syarafi dengan tegas membatalkan nasab Ba’alwi. Dalam kitabnya yang berjudul Al-Sykahsiyyah al-Wahmiyyah fi Tarikh Hadrmaut (2025) halaman 6 ia mengatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                التاسعة عبيد الله بن احمد بن عيسى المهاجر هذه الشخصية أيضا لا وجود لها في واقع حضرموت ولا في خارجها وقد ذكر علماء النسب أن أحمد بن عيسى العلوي الذي لم يدخل حضرموت أولاده ثلاثة وهم محمد وعلي والحسين فلم يذكر له ابن معقب أو غير معقب اسمه عبيد الله. انظر الكذب المقيت في ادعاء النسب إلى آل البيت فتكون سلسلة النسب من عبيد الله فمن بعده نسب مركب ومصطنع ليس له في الحقيقة مكان .
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Yang kesembilan, Ubadillah ibn Ahmad ibn Isa al-Muhajir, adalah tokoh fiktif baik di Hadramawt maupun di tempat lain. Para ahli silsilah menyatakan bahwa Ahmad ibn Isa al-Alawi, yang tidak pernah memasuki Hadramawt, memiliki tiga putra: Muhammad, Ali, dan al-Husayn. Tidak ada putra, baik yang memiliki keturunan maupun tidak, yang bernama Ubaidillah. Perhatikan kebohongan yang terang-terangan dalam mengklaim keturunan dari keluarga Nabi. Garis keturunan dari Ubaidillah dan seterusnya adalah garis keturunan yang dibuat-buat dan direkayasa, tanpa dasar dalam kenyataan” (Al-sykahsiyyah al-Wahmiyyah fi Tarikh Hadrmaut hlm 6).
+                        </div>
+
+                        <p class="book-paragraph">
+                            Perhatikan, Syaikh Abdullah dengan tegas menyatakan bahwa sosok Ubedillah adalah sosok fiktif. Sosok yang direkayasa hanya untuk kepentingan menyambungkan nasab Ba’alwi saja. dengan fiktifnya ubaidillah maka gugurlah semua bangunan nasab dan sejarah Ba’alwi.
+                        </p>
+
+                        <div class="book-ornament" aria-hidden="true">✦ ✦ ✦</div>
+
+                        <h3 class="book-sub-title">
+                            AL-IMAM MUQBIL BIN HADI AL-WADA’I TIDAK PERCAYA NASAB BA’ALWI DI ABAD KE-15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Seorang ulama Yaman yang Bernama Al-Imam Muqbil bin Hadi al-Wada’I, ia adalah pakar hadis yang mengarang puluhan kitab dalam Ulumul Hadits,&nbsp; dengan tegas menantang siapa yang dapat mengitsbat nasab Ba’alwi? Dalam kitabnya Sha’qat al-Zilzal juz 1 halaman 44 ia mengatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                وكذا من يستطيع أن يثبت لنا نسب جد آل أبي علوي وآل بيت الأهدل وآل القديمي ؟ فهم ثلاثة خرجوا من العراق لا يعرفون في اليمن، ألا يجوز أنهم تمالئوا وادعوا أنهم علويون ؟
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            "Dan siapa yang dapat membuktikan kepada kita silsilah kakek dari keluarga Al Abi Alawi, keluarga Al-Ahdal, dan keluarga Al-Qudaimi? Mereka bertiga berasal dari Irak dan tidak dikenal di Yaman. Bukankah mungkin mereka bersekongkol dan mengaku sebagai Alawi?” (Sha’qat al-Zilzal juz 1 hlm 44)."
+                        </div>
+                    </div>
+
+                    <!-- ==================== HALAMAN 11: ABAD KE-15 H (DR. NADINE & PANGERAN AT-TAHIRI) ==================== -->
+                    <div class="book-page-slice hidden" data-page="11" data-section="Abad ke-15 Hijriyah">
+                        <span class="book-chapter-label">Bab VII • Abad ke-15 Hijriyah (Lanjutan)</span>
+                        <h3 class="book-sub-title">
+                            Dr. NADINE AL-MEWARI MEMBATALKAN NASAB BA’ALWI ABAD 15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Seorang akademisi Yaman yang Bernama Dr. Nadine Al-mewari dalam akun X dengan tegas membatalkan nasab Ba’alwi berdasarkan tes Y-DNA Ba’alwi yang konisten berada pada halpogrup G.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Dr. Nadine mengatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                السلالة G تكشف زيف ادعاءات النسب القرشي للهاشميين في حضرموت.&nbsp; نسب العلويين (آل باعلوي في حضرموت). يقدّمون أنفسهم على أنهم من ذرية الحسين بن علي بن أبي طالب... كثير من الفحوصات الجينية اللي ظهرت في مشاريع أنساب بالسنوات الأخيرة أظهرت أن أغلب “العلويين/السادة” في حضرموت ينتمون للسلالة G. . السلالة G ما هي عدنانية ولا قريشية، بل مرتبطة أكثر بأصول من القوقاز والأناضول وانتقلت لاحقًا لمناطق أخرى
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Haplogroup G membongkar kepalsuan klaim Hashemite tentang garis keturunan Quraysh di Hadhramaut. Kaum Alawi (keluarga Ba'Alawi di Hadhramaut) mengklaim diri sebagai keturunan Hussein ibn Ali ibn Abi Talib... Banyak tes genetik yang muncul dalam proyek silsilah beberapa tahun terakhir menunjukkan bahwa sebagian besar "Alawi/Sayyid" di Hadhramaut termasuk dalam haplogroup G. Haplogroup G bukanlah Adnanite maupun Quraysh, melainkan lebih terkait erat dengan asal-usul di Kaukasus dan Anatolia, yang kemudian bermigrasi ke wilayah lain.”
+                        </div>
+
+                        <div class="book-source-line">
+                            <strong>Sumber:</strong> <a href="https://x.com/nadine43460/status/1958894424055828566" target="_blank" rel="noopener noreferrer">https://x.com/nadine43460/status/1958894424055828566</a>
+                        </div>
+
+                        <div class="book-ornament" aria-hidden="true">✦ ✦ ✦</div>
+
+                        <h3 class="book-sub-title">
+                            PANGERAN ABDUNNASHIR BIN AHMAD AT-TAHIRI YAMAN MEMBATALKAN NASAB BA’ALWI ABAD 15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Pangeran Abdunnashir bin Ahmad At-Tahiri, seorang bangsawan keturunan dinasti kerajaan Al-Tahiri Yaman diakun X pribadinya membatalkan nasab Ali Al-jufri. Dengan membatalkan nasab Ali al-jufri kepada Ahlulbait, tentu bisa dimaknai ia membatalkan nasab Ba’alwi secara keseluruhan.
+                        </p>
+
+                        <p class="book-paragraph">
+                            Pangeran Abdunnashir menyatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                إحملوا عني هذه التغريدة إلى علي الجفري أنا&nbsp; الأمير عبدالناصر بن حماد بن احمد بن علي بن قاسم بن احمد بن الحسن بن الهيثمي بن عامر بن عبدالوهاب الطاهري حفيد سلطان العواذل أنكر نسب علي الجفري&nbsp; لآل البيت وإذا ثبت نسبه بعد التحليل DNA&nbsp; أتحمل أي إجراء قانوني والسلام على من اتبع الهدى
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Sampaikan pesan ini dari saya kepada Ali al-Jifri: Saya, Pangeran Abdul Nasser bin Hammad bin Ahmed bin Ali bin Qasim bin Ahmed bin al-Hassan bin al-Haythami bin Amer bin Abdul Wahab al-Taheri, cucu Sultan al-Awadhil, menyangkal garis keturunan Ali al-Jifri dari keluarga Nabi. Jika garis keturunannya terbukti melalui analisis DNA, saya akan menanggung konsekuensi hukum apa pun. Salam sejahtera bagi orang-orang yang mengikuti petunjuk.”
+                        </div>
+
+                        <div class="book-source-line">
+                            <strong>Sumber:</strong> <a href="https://x.com/BdWdhly/status/1579463616080019456" target="_blank" rel="noopener noreferrer">https://x.com/BdWdhly/status/1579463616080019456</a>
+                        </div>
+                    </div>
+
+                    <!-- ==================== HALAMAN 12: ABAD KE-15 H (DR. ASYU'AIBI & DR. AL-KALIDARI) ==================== -->
+                    <div class="book-page-slice hidden" data-page="12" data-section="Abad ke-15 Hijriyah">
+                        <span class="book-chapter-label">Bab VII • Abad ke-15 Hijriyah (Penutup)</span>
+                        <h3 class="book-sub-title">
+                            Dr. ASYU’AIBI MEMBATALKAN NASAB BAALWI ABAD 15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Seorang pakar DNA dari Yaman yang Bernama Dr. Asyu’aibi membatalkan nasab Assegaf berdasarkan hasil tes Y-DNA mereka yang berada pada haplogrup G-M201.
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                وأورد الشعيبي عدد من النتائج لبعض من يدعون أنهم هاشميين يمنيين أثبتت بشكل قاطع أن أصولهم لا تعود إلى الأصول العربية بالمرة وهو ما يؤكد الحديث عن أن هذه الأسر قامت بتزوير نسبها إلى النسب الهاشمي بغية إبتزاز المواطنين والحصول على إمتزازات وإدعاء الحق الإلهي في الحكم وفيما يلي بعض النتائج:... 2- عينة لشخص من بيت السقاف G-M201 وهذه السلالة ايضاً ليست من الأصول العربية بتاتاً ولا تقع ضمن السلالة J ولا تعود أصول هذه السلالة إلى شبه الجزيرة العربية ونشأت هذه السلالة فيما يعرف اليوم بإيران ولا يزال القسم الأكبر منها متواجداً في إيران على الرغم من ظهور نتائج لهذه السلالة في اسرائيل وبعض مناطق الجزيرة العربية وقد تكون ناتجة عن هجرة اليهود إلى الجزيرة العربية قبل الإسلام وإسلام بعضهم واستقرارهم فيها.
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Al-Syu’aibi mengutip sejumlah hasil untuk beberapa orang yang mengaku sebagai keturunan Hashemite Yaman yang secara definitif membuktikan bahwa asal-usul mereka sama sekali tidak berasal dari Arab, yang menegaskan anggapan bahwa keluarga-keluarga ini memalsukan garis keturunan mereka ke garis keturunan Hashemite untuk memeras warga dan mendapatkan hak istimewa serta mengklaim hak ilahi untuk memerintah. Berikut beberapa hasilnya:... 2- Sampel seseorang dari keluarga Al-Saqqaf G-M201. Garis keturunan ini juga sama sekali bukan berasal dari Arab dan tidak termasuk dalam garis keturunan J. Asal-usul garis keturunan ini tidak berasal dari Semenanjung Arab. Garis keturunan ini berasal dari wilayah yang sekarang dikenal sebagai Iran, dan sebagian besar masih ada di Iran, meskipun muncul hasil untuk garis keturunan ini di Israel dan beberapa wilayah Semenanjung Arab. Ini mungkin merupakan hasil migrasi orang Yahudi ke Semenanjung Arab sebelum Islam, konversi sebagian dari mereka ke Islam, dan pemukiman mereka di sana.”
+                        </div>
+
+                        <div class="book-source-line">
+                            <strong>Sumber 1:</strong> <a href="https://x.com/alkumaim_m/status/1816874376748245007" target="_blank" rel="noopener noreferrer">https://x.com/alkumaim_m/status/1816874376748245007</a>
+                        </div>
+
+                        <div class="book-source-line">
+                            <strong>Sumber 2:</strong> <a href="https://sahaafa.net/show2627644.html" target="_blank" rel="noopener noreferrer">https://sahaafa.net/show2627644.html</a>
+                        </div>
+
+                        <div class="book-ornament" aria-hidden="true">✦ ✦ ✦</div>
+
+                        <h3 class="book-sub-title">
+                            Dr. YASIN AL-KALIDARI MEMBATALKAN NASAB BA’ALWI PADA ABAD KE-15 HIJRIYAH
+                        </h3>
+
+                        <p class="book-paragraph no-indent">
+                            Seorang akademisi dan tokoh Irak Bernama Dr. Yasin Al-Kalidari menulis sebuah kitab berjudul Al-Suyuf al-Mujliyah, di dalam kitab itu ia tegas membatalkan nasab Ba’alwi. Dalam kitab tersebut ia mengatakan:
+                        </p>
+
+                        <div class="book-arabic-box">
+                            <p class="book-arabic-text" lang="ar" dir="rtl">
+                                ونحن نعلم وكل اهل النسب بأن هناك ادلة قاطعة واضحة وصريحة ببطلان ادعاء النسبة العلوية والهاشمية&nbsp; لباعلوي الحضارمة .وان نسبهم لا يمت بصلة إلى النسب العلوي الهاشمي قطعا و أبداً&nbsp; وأن دعواهم معلومة للأمة جمعاء
+                            </p>
+                        </div>
+
+                        <div class="book-translation-box">
+                            “Kami tahu, dan semua ahli nasab tahu, bahwa ada dalil yang qot’iy, jelas dan tegas yang membatalkan klaim Ba’alwi Hadramaut sebagai keturunan Ali dan Bani Hasyim. Garis keturunan mereka sama sekali tidak memiliki hubungan apa pun dengan garis keturunan Alawi Hashimi, dan klaim mereka diketahui oleh seluruh umat, semuanya (Al-Suyuf al-Mujliyah halaman 5).
+                        </div>
+
+                        <div class="mt-8 pt-5 border-t text-right" style="border-color: var(--rule-color);">
+                            <p class="font-display text-base sm:text-lg font-bold" style="color: var(--emerald-deep);">
+                                Penulis: Imaduddin Utsman Al-Bantani
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Running Footer (Nomor Halaman Buku Klasik) -->
+                <div class="running-footer pt-3 mt-8 flex items-center justify-between no-print">
+                    <button id="prevPageBtn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs sm:text-sm font-medium transition hover:opacity-80 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer" style="border-color: var(--rule-color); color: var(--ink-primary);">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                        <span>Sebelumnya</span>
+                    </button>
+
+                    <div id="bottomPageNumber" class="font-semibold tracking-widest text-sm">
+                        — 1 —
+                    </div>
+
+                    <button id="nextPageBtn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs sm:text-sm font-medium transition hover:opacity-80 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer" style="border-color: var(--rule-color); color: var(--ink-primary);">
+                        <span>Berikutnya</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        (function () {
+            const coverStage = document.getElementById('coverStage');
+            const readerStage = document.getElementById('readerStage');
+            const startReadingBtn = document.getElementById('startReadingBtn');
+            const backToCoverBtn = document.getElementById('backToCoverBtn');
+
+            const pages = Array.from(document.querySelectorAll('.book-page-slice'));
+            const totalPages = pages.length;
+            let currentPage = 1;
+
+            const prevPageBtn = document.getElementById('prevPageBtn');
+            const nextPageBtn = document.getElementById('nextPageBtn');
+            const bottomPageNumber = document.getElementById('bottomPageNumber');
+            const topPageIndicator = document.getElementById('topPageIndicator');
+            const runningSectionLabel = document.getElementById('runningSectionLabel');
+            const tocItems = document.querySelectorAll('.toc-item');
+
+            // 1. Switch Between Separate Cover & Book Reader
+            function openBook(pageNum = 1) {
+                coverStage.classList.add('view-hidden');
+                readerStage.classList.remove('view-hidden');
+                goToPage(pageNum);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function showCover() {
+                readerStage.classList.add('view-hidden');
+                coverStage.classList.remove('view-hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            startReadingBtn.addEventListener('click', () => openBook(1));
+            backToCoverBtn.addEventListener('click', showCover);
+
+            // 2. Book Page Navigation
+            function goToPage(pageNum) {
+                currentPage = Math.min(totalPages, Math.max(1, Number(pageNum)));
+
+                pages.forEach((slice) => {
+                    const p = Number(slice.getAttribute('data-page'));
+                    if (p === currentPage) {
+                        slice.classList.remove('hidden');
+                        runningSectionLabel.textContent = slice.getAttribute('data-section') || '';
+                    } else {
+                        slice.classList.add('hidden');
+                    }
+                });
+
+                bottomPageNumber.textContent = `— ${currentPage} —`;
+                topPageIndicator.textContent = `Halaman ${currentPage} dari ${totalPages}`;
+
+                prevPageBtn.disabled = currentPage <= 1;
+                nextPageBtn.disabled = currentPage >= totalPages;
+
+                // Update Active TOC item
+                tocItems.forEach((btn) => {
+                    const target = Number(btn.getAttribute('data-goto-page'));
+                    if (target === currentPage) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            prevPageBtn.addEventListener('click', () => {
+                if (currentPage > 1) goToPage(currentPage - 1);
+            });
+
+            nextPageBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) goToPage(currentPage + 1);
+            });
+
+            // Keyboard Left / Right Page Flip when in Reader Mode
+            document.addEventListener('keydown', (e) => {
+                if (readerStage.classList.contains('view-hidden')) return;
+                if (e.key === 'ArrowLeft' && currentPage > 1) {
+                    goToPage(currentPage - 1);
+                } else if (e.key === 'ArrowRight' && currentPage < totalPages) {
+                    goToPage(currentPage + 1);
+                } else if (e.key === 'Escape') {
+                    closeToc();
+                }
+            });
+
+            // 3. Table of Contents Drawer
+            const tocDrawer = document.getElementById('tocDrawer');
+            const tocBackdrop = document.getElementById('tocBackdrop');
+            const openTocBtn = document.getElementById('openTocBtn');
+            const closeTocBtn = document.getElementById('closeTocBtn');
+
+            function openToc() {
+                tocBackdrop.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    tocBackdrop.classList.remove('opacity-0');
+                    tocDrawer.classList.remove('-translate-x-full');
+                });
+            }
+
+            function closeToc() {
+                tocBackdrop.classList.add('opacity-0');
+                tocDrawer.classList.add('-translate-x-full');
+                setTimeout(() => {
+                    tocBackdrop.classList.add('hidden');
+                }, 300);
+            }
+
+            openTocBtn.addEventListener('click', openToc);
+            closeTocBtn.addEventListener('click', closeToc);
+            tocBackdrop.addEventListener('click', closeToc);
+
+            tocItems.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const targetPage = Number(btn.getAttribute('data-goto-page'));
+                    goToPage(targetPage);
+                    closeToc();
+                });
+            });
+
+            // 4. Paper Theme Switcher
+            const themeBtns = document.querySelectorAll('.theme-btn');
+            function applyTheme(themeName) {
+                document.body.setAttribute('data-theme', themeName);
+                try {
+                    localStorage.setItem('book_print_theme', themeName);
+                } catch (e) {}
+
+                themeBtns.forEach((btn) => {
+                    if (btn.getAttribute('data-set-theme') === themeName) {
+                        btn.classList.add('ring-2', 'ring-amber-400');
+                    } else {
+                        btn.classList.remove('ring-2', 'ring-amber-400');
+                    }
+                });
+            }
+
+            try {
+                const savedTheme = localStorage.getItem('book_print_theme');
+                if (savedTheme && ['ivory', 'sepia', 'night'].includes(savedTheme)) {
+                    applyTheme(savedTheme);
+                }
+            } catch (e) {}
+
+            themeBtns.forEach((btn) => {
+                btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-set-theme')));
+            });
+
+            // 5. Font Scale Controls
+            let fontScale = 1.0;
+            function updateFontScale(newScale) {
+                fontScale = Math.min(1.32, Math.max(0.85, Number(newScale.toFixed(2))));
+                document.documentElement.style.setProperty('--font-scale', fontScale);
+                try {
+                    localStorage.setItem('book_print_font_scale', fontScale);
+                } catch (e) {}
+            }
+
+            try {
+                const savedScale = parseFloat(localStorage.getItem('book_print_font_scale'));
+                if (!isNaN(savedScale) && savedScale >= 0.85 && savedScale <= 1.32) {
+                    updateFontScale(savedScale);
+                }
+            } catch (e) {}
+
+            document.getElementById('fontDecBtn').addEventListener('click', () => updateFontScale(fontScale - 0.08));
+            document.getElementById('fontResetBtn').addEventListener('click', () => updateFontScale(1.0));
+            document.getElementById('fontIncBtn').addEventListener('click', () => updateFontScale(fontScale + 0.08));
+        })();
+    </script>
+</body>
+</html>
